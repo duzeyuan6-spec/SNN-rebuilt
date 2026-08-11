@@ -1,0 +1,30 @@
+run_name: ann_mr050
+seed: 123
+device: cuda
+
+data:
+  train_dir: data/train/Train400
+  val_dir: data/test/Set11
+  patch_size: 99
+  batch_size: 16
+  num_workers: 4
+  augment: true
+
+cs:
+  block_size: 33
+  measurement_rate: 0.50
+
+model:
+  kind: ann
+  stages: 5
+  channels: 32
+  blocks_per_stage: 2
+
+train:
+  epochs: 200
+  lr: 0.0001
+  weight_decay: 0.0
+  loss: l1
+  save_dir: runs/ann_mr050
+  log_every: 50
+

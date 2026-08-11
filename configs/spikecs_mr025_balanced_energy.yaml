@@ -1,0 +1,33 @@
+run_name: spikecs_mr025_balanced_energy
+seed: 123
+device: cuda
+
+data:
+  train_dir: data/train/Train400
+  val_dir: data/test/Set11
+  patch_size: 99
+  batch_size: 8
+  num_workers: 4
+  augment: true
+
+cs:
+  block_size: 33
+  measurement_rate: 0.25
+
+model:
+  kind: spike
+  stages: 5
+  channels: 32
+  blocks_per_stage: 2
+  time_steps: 6
+  threshold: 0.52
+  decay: 0.7
+
+train:
+  epochs: 80
+  lr: 0.00003
+  weight_decay: 0.0
+  spike_reg: 0.0002
+  loss: l1
+  save_dir: runs/spikecs_mr025_balanced_energy
+  log_every: 50

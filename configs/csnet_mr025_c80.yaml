@@ -1,0 +1,28 @@
+run_name: csnet_mr025_c80
+seed: 123
+device: cuda
+
+data:
+  train_dir: data/train/Train400
+  val_dir: data/test/Set11
+  patch_size: 99
+  batch_size: 8
+  num_workers: 4
+  augment: true
+
+cs:
+  block_size: 33
+  measurement_rate: 0.25
+
+model:
+  kind: csnet
+  channels: 80
+  blocks: 8
+
+train:
+  epochs: 120
+  lr: 0.0001
+  weight_decay: 0.0
+  loss: l1
+  save_dir: runs/csnet_mr025_c80
+  log_every: 50

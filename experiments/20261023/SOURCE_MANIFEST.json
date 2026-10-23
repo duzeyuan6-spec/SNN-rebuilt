@@ -1,0 +1,182 @@
+[
+  {
+    "file": "src/cs.py",
+    "sha256": "1b725aa714ff410a83d5e78980edb14afadadb4ee348551633e69b83bb66a60f",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "src/data.py",
+    "sha256": "2be8c4ba539bf0e5b3bbc27be73c54528c95871693524febeb09ec4462b7bc81",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "src/deployment.py",
+    "sha256": "389840a0da87a1d71aba14e14b8c5892ccb3711031812613c2732f41db51c005",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "src/energy.py",
+    "sha256": "22b6c90c379cf1a1a4546cdc6cdd1c960d2d53ba537b96e7a75d0e574222a940",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "src/hybrid_backbone.py",
+    "sha256": "336864fb7445c7116e2a2c37e9008b791dd8069aa0bd5c0367177ed6e6c5811a",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "src/hybrid_deployment_v3.py",
+    "sha256": "5c1a5a3068359051f52a9fda5c6bbcbbc204f614ac6c4c409b8faa17e47e8eea",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "src/metrics.py",
+    "sha256": "d852fd2c745452aecbeced7d44a7ce7baaca579efc13c4b3ab9916d4f9cc8359",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "src/models.py",
+    "sha256": "75d6f465df73e42a2f5c2a73e26a84cd7949a54a777bbb35c6f85f7b4aa1e560",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "src/reconstruction_v2.py",
+    "sha256": "d5c8ba7e78f0a3220a2e9022a08eacf07e59e8db74f20bd5df46bee472256de0",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "src/reconstruction_v3.py",
+    "sha256": "696fd8c6429260851b49292b4d54362abe7278a5a481357fb12d2c5ac9bcda0f",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "src/reconstruction_v4.py",
+    "sha256": "3bfb8ffcc6569c22723f2e5ad13004a1e4995371a181d5de7eb1a6d96cd5d53e",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "src/reconstruction_v5.py",
+    "sha256": "6bd21adb9c594dd2d3b8187f210cb333f73f806a7aa3104084fb40fff078979d",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "src/spiking.py",
+    "sha256": "b80054cd55d14dd017192dc1db8d7436067ceb8275a88fa947c364b4e8fe412b",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "src/utils.py",
+    "sha256": "3bbbad5a6af4f3f8bb50ffb91e41f3ac910c88c06ea76107287606b19d26e0c2",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "src/__init__.py",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/train_reconstruction_v2.py",
+    "sha256": "724422177c9c764c74f82d214556f3cbfa70b5fc5b9d7447114a8ecf9c639cd4",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/evaluate_reconstruction_v3.py",
+    "sha256": "265063f62133873d09ea7d2db12416f50d159a524cc37904ce42843ce9af58de",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/evaluate_supplementary.py",
+    "sha256": "f425112843d08b23494e24486780460e49a5c23093c2e9e971dccdaf7b6f8117",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/evaluate_snn_control.py",
+    "sha256": "35c69e75a7b706ea2ce0039e44fa6d6093eba2eff8a5f6522448838127125813",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/evaluate_resolution_stages.py",
+    "sha256": "1a97320c67b5b1884e1a453da777fc2e67899607bcead690f1b3179e8248e1be",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/run_repeats_ablations.py",
+    "sha256": "2743c392e76818242d9ac2e6f5c454c6fe5fa209ac57140be864ba8c7b596be3",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/run_resolution_multirate.py",
+    "sha256": "60a651112f82bd6a3fc0c2dcc09844b72d0053336eb405f526ca7d73256b6b56",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/run_ann_comparison_queue.py",
+    "sha256": "efb54060a9330e50ca01d1086a90b4971bb75d30ee2a73ba54f9c94dfc30b90b",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/train_ann_comparators.py",
+    "sha256": "4b755db5b5436fcd965f183e42c3c731285a29f0da14b6668d56f0449a520958",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/train_multirate_octuf.py",
+    "sha256": "9a073f7c0e588b0b84c666c2f7d6ef0381bb4be9d60d31eb38d88ffed9ee9586",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/train_esdnet_cs.py",
+    "sha256": "309d762f3887c76558699a432f276f941cd0537d129e98cffa9527df53ec6bcb",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/train_spikerain_cs.py",
+    "sha256": "345e13dd0a8040c34ae35497d15370f6c44449f6227ff06ec5fcf05dce3e9bd8",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/ann_cs_adapters.py",
+    "sha256": "818016af00832a50c3e7bed1f45e5f34ac8324a3100c3118b5fbadaed7b9979a",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/multirate_octuf_adapter.py",
+    "sha256": "e3bf852aa57cec7175ce621f423de2faf8b2957262679d7f94ae99df8776e411",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/esdnet_cs_adapter.py",
+    "sha256": "d92247938b5d6cee35eee51d7f86c2713a6099ec1309e5a128853e2ed00a2cbc",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/spikerain_cs_adapter.py",
+    "sha256": "a4cba308f07c4d5754f77ac8581f0fed361361b4941ed88c8381745d2843cfdf",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/benchmark_reconstruction_power.py",
+    "sha256": "72d8ab9ca7b66b9420badef18e907df177251be0814d97e77122d971a62bf4b3",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/test_repository_reconstruction.py",
+    "sha256": "aea34042e6c89504515335849414f461b215c7afc7ea088db849328cf675130f",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/test_reconstruction_evaluation.py",
+    "sha256": "0deb0d20a12d0755d766f3d577492e0965e351a2c3933d852813a7f83d2e62df",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/test_metric_structure_loss.py",
+    "sha256": "4ce34ffc84380cfb9c8ec42f415b36cfeaf6daf20a9e567079c6aca833241706",
+    "source": "frozen local experiment source; copied unchanged"
+  },
+  {
+    "file": "scripts/test_multirate_extension.py",
+    "sha256": "b85c9aaa4fa5e938286de0013ccc16712e945df013d4ca3ba5a21316a98d41f7",
+    "source": "frozen local experiment source; copied unchanged"
+  }
+]

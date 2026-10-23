@@ -1,0 +1,19 @@
+{
+  "name": "SNN mixed resolution: 8 half-resolution + 3 full-resolution stages",
+  "build_factory": "src.models.build_repository_reconstruction",
+  "build_kwargs": {
+    "kind": "spike",
+    "channels": 49,
+    "stages": 11,
+    "time_steps": 8,
+    "block_size": 32,
+    "measurement_rate": 0.25,
+    "spatial_dilation": 2,
+    "learnable_sensing": true,
+    "freeze_sensing": true,
+    "burst_calibration": "rms",
+    "snn_spatial_stride": 2,
+    "snn_fullres_tail": 3
+  },
+  "parameters": 748894
+}

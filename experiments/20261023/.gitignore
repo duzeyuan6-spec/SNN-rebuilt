@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+data/
+runs/
+outputs/
+third_party/
+*.pt
+*.pth
+*.tar*
+.env*
+.test-deps/

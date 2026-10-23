@@ -1,0 +1,19 @@
+{
+  "source": "unused_by_unified_loader",
+  "groups": [
+    {
+      "name": "mr025",
+      "size": 256,
+      "models": [
+        {
+          "kind": "main_snn",
+          "checkpoint": "runs/spike/best.pt"
+        },
+        {
+          "kind": "fixed_ann",
+          "checkpoint": "runs/ann/best.pt"
+        }
+      ]
+    }
+  ]
+}

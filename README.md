@@ -1,3 +1,9 @@
+# SNN-rebuilt
+
+最新冻结实验代码见 [experiments/20261023](experiments/20261023/README.md)。主模型为 8 半分辨率 + 3 全分辨率阶段，MR=0.25 时 748894 参数。旧版代码和记录保留在根目录；下方为历史说明，不是当前实验协议。
+
+---
+
 # SpikeCS First Experiment
 
 Minimal code for the first experiment:

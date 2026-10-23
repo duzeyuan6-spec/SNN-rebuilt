@@ -56,8 +56,6 @@ done
 - 无正则：seed123，`--spike-reg 0`；无量化预热：seed123，`--quant-warmup 0`；其余主模型协议不变，各增加 200 轮。
 - `run_repeats_ablations.py`、`run_resolution_multirate.py`、`run_ann_comparison_queue.py` 是原始队列脚本，`--base` 下仍要求原实验相对目录布局；可读作精确配置参考，不能直接指向任意数据文件夹。
 
-此次主发布目录不纳入新增同布局连续 ANN 实验。其原始证据在本地归档保留，删除正文展示并不证明其无效；不能据此声称计数激活自身已证明 GPU 节能。
-
 ## 外部方法
 
 仅上传适配器，不重新分发第三方源码。将官方源代码放入自行指定的位置，参考各 trainer 的 `--help` 传入 `--source`、teacher、manifest 等参数。保留上游许可。

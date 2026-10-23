@@ -1,4 +1,0 @@
-method,mr,set,psnr,ssim,params_m,fr,energy_uj,source
-ISTA-Net++,0.25,Set11,xx.xx,0.xxxx,TODO,0.0000,N/A,baselines/ISTA-Netpp/reproduced
-ISTA-Net++,0.25,BSD68,xx.xx,0.xxxx,TODO,0.0000,N/A,baselines/ISTA-Netpp/reproduced
-ISTA-Net++,0.25,Urban100,xx.xx,0.xxxx,TODO,0.0000,N/A,baselines/ISTA-Netpp/reproduced

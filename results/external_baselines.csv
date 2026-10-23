@@ -1,5 +1,0 @@
-method,mr,set,psnr,ssim,params_m,fr,energy_uj,source
-ISTA-Net+,0.25,BSD68,29.36,0.8525,0.380,0.0000,N/A,reported:MMU-Net_Table2_Entropy2023
-ISTA-Net+,0.25,Set11,32.59,0.9254,0.380,0.0000,N/A,reported:MMU-Net_Table2_Entropy2023
-ReconNet,0.25,Set11,32.07,0.9246,0.309,0.0000,N/A,reported:Sensors2023_Table1
-ISTA-Net+,0.25,Urban100,29.78,0.8954,0.380,0.0000,N/A,reported:MMU-Net_Table2_Entropy2023

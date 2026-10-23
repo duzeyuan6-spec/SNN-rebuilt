@@ -28,16 +28,17 @@ def pil_to_tensor(img):
 
 
 class PatchImageDataset(Dataset):
-    def __init__(self, root, patch_size=99, augment=True):
+    def __init__(self, root, patch_size=99, augment=True, repeats=1):
         self.files = list_images(root)
         self.patch_size = patch_size
         self.augment = augment
+        self.repeats = max(int(repeats), 1)
 
     def __len__(self):
-        return len(self.files)
+        return len(self.files) * self.repeats
 
     def __getitem__(self, idx):
-        img = load_gray(self.files[idx])
+        img = load_gray(self.files[idx % len(self.files)])
         w, h = img.size
         ps = self.patch_size
 

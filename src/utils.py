@@ -29,6 +29,17 @@ def ensure_dir(path):
     Path(path).mkdir(parents=True, exist_ok=True)
 
 
+def check_validation_split(train_dir, val_dir):
+    """Fail closed for legacy configs that selected checkpoints on test sets."""
+    train, val = Path(train_dir).resolve(), Path(val_dir).resolve()
+    forbidden = {'test', 'set11', 'bsd68', 'urban100'}
+    if forbidden.intersection(part.lower() for part in val.parts):
+        raise ValueError('Benchmark test sets cannot be used for checkpoint selection. '
+                         'Use train_reconstruction_v2.py with a frozen train-source split.')
+    if train == val or train in val.parents or val in train.parents:
+        raise ValueError('Training and validation roots overlap')
+
+
 def count_params(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
 

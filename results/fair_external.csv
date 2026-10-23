@@ -1,4 +1,0 @@
-method,mr,set,psnr,ssim,params_m,fr,energy_uj,source
-ISTA-Net++,0.25,BSD68,29.92,0.8652,0.752,0.0000,524058.240,results/logs/istanetpp_bsd68_mr025.log|energy_estimated_mac
-ISTA-Net++,0.25,Set11,33.19,0.9310,0.752,0.0000,222438.202,results/logs/istanetpp_set11_mr025.log|energy_estimated_mac
-ISTA-Net++,0.25,Urban100,29.36,0.9052,0.752,0.0000,889752.807,results/logs/istanetpp_urban100_mr025.log|energy_estimated_mac

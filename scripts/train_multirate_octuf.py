@@ -46,7 +46,7 @@ def main():
     optimizer=torch.optim.Adam((p for p in model.parameters() if p.requires_grad),lr=initial_lr)
     scheduler=torch.optim.lr_scheduler.CosineAnnealingLR(optimizer,T_max=a.epochs,eta_min=1e-7)
     protocol=dict(method=a.method+' (official decoder, common sensing protocol)',args={k:v for k,v in vars(a).items() if k!='resume'},
-        upstream={'ista_plus':'https://github.com/jianzhangcs/ISTA-Net-PyTorch','ista_pp':'https://github.com/jianzhangcs/ISTA-Netpp','octuf':'https://github.com/songjiechong/OCTUF'}[a.method],
+        upstream={'ista_plus':'https://github.com/jianzhangcs/ISTA-Net-PyTorch','octuf':'https://github.com/songjiechong/OCTUF'}[a.method],
         decoder_parameters=sum(p.numel() for p in model.parameters() if p.requires_grad),fixed_initializer_coefficients=262144 if a.method=='ista_plus' else 0,sensing_coefficients=phi.numel(),
         nominal_mr=state['args']['mr'],actual_mr=phi.shape[0]/1024,teacher_epochs=state['args']['epochs'],
         capacity_comparison='author decoder widths/depths; NOT parameter matched',

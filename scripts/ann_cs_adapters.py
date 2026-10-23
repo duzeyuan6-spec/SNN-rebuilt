@@ -10,7 +10,7 @@ from torch import nn
 from torch.nn import functional as F
 
 FILES={'ista_plus':'ISTA-Net-PyTorch/Train_CS_ISTA_Net_plus.py',
-       'ista_pp':'ISTA-Netpp/Train_ISTA_Net_pp.py','octuf':'OCTUF/model_octuf.py'}
+       'octuf':'OCTUF/model_octuf.py'}
 
 def definitions(source,kind,block=32):
     from einops import rearrange
@@ -38,13 +38,12 @@ class OfficialCS(nn.Module):
             self.net.Phiweight.requires_grad_(False)
         else:
             self.register_buffer('phi',phi.clone())
-            self.net=ns['ISTANetplus'](9) if kind=='ista_plus' else ns['ISTA_Net_pp'](20)
+            self.net=ns['ISTANetplus'](9)
         if kind=='ista_plus':self.register_buffer('qinit',phi.T.clone())
     def reset(self):self.aux=None
     def forward(self,x):
         self.aux=None
         if self.kind=='octuf':return self.net(x)
-        if self.kind=='ista_pp':return self.net([x,x.new_tensor([[.25,0.]])],self.phi,None,256)
         b,c,h,w=x.shape;patches=F.unfold(x,32,stride=32).transpose(1,2).reshape(-1,1024)
         pred,sym=self.net(patches@self.phi.T,self.phi,self.qinit)
         if self.training:self.aux=.01*sum(z.square().mean() for z in sym)
@@ -81,7 +80,6 @@ def smoke(source):
                 patches=F.unfold(x,32,stride=32).transpose(1,2).reshape(-1,1024)
                 raw,_=model.net(patches@phi.T,phi,model.qinit)
                 ref=F.fold(raw.reshape(1,-1,1024).transpose(1,2),(64,96),32,stride=32)
-            elif kind=='ista_pp':ref=model.net([x,x.new_tensor([[.25,0.]])],phi,None,256)
             else:ref=model.net(x)
             torch.testing.assert_close(first,ref,rtol=0,atol=0)
         results[kind]=dict(trainable=sum(p.numel() for p in model.parameters() if p.requires_grad),parameters=sum(p.numel() for p in model.parameters()),fixed_sensing=262144,extra_fixed_initializer=262144 if kind=='ista_plus' else 0)

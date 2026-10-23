@@ -11,3 +11,5 @@
 - New staged code scanned for credentials, private server addresses and local user paths; none found. Datasets, checkpoints, local runtime dependencies and raw logs excluded.
 
 Root migration: replaced the legacy working tree with this frozen implementation; repeated compilation, 22 unit tests, all three MR compatibility checks and hardware CLI loading successfully. Model/training implementations unchanged from the preceding release.
+
+Maintained comparator-scope update: removed unused comparator routing and references. Compilation, retained ISTA-Net+ CPU forward/backward, and three-rate OCTUF compatibility checks passed. README result tables generated from archived measurements, with sanitized source tables under results/.

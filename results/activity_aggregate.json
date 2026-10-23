@@ -1,0 +1,41 @@
+[
+  {
+    "dataset": "Set11",
+    "main": {
+      "nonzero_fraction": 0.7995472383289253,
+      "absolute_count": 1.9998734381447891,
+      "psnr": 34.19197940548866
+    },
+    "no_regularizer": {
+      "nonzero_fraction": 0.8093366374870261,
+      "absolute_count": 2.0445521372611544,
+      "psnr": 34.18647912544777
+    }
+  },
+  {
+    "dataset": "BSD68",
+    "main": {
+      "nonzero_fraction": 0.7924897098399019,
+      "absolute_count": 1.840620515007317,
+      "psnr": 31.423464181170793
+    },
+    "no_regularizer": {
+      "nonzero_fraction": 0.8025397834471146,
+      "absolute_count": 1.8824638110526526,
+      "psnr": 31.421299555858944
+    }
+  },
+  {
+    "dataset": "Urban100",
+    "main": {
+      "nonzero_fraction": 0.7927427550511091,
+      "absolute_count": 2.0255267835765807,
+      "psnr": 29.839108962313553
+    },
+    "no_regularizer": {
+      "nonzero_fraction": 0.8019918479232065,
+      "absolute_count": 2.062061749385592,
+      "psnr": 29.826874231769114
+    }
+  }
+]

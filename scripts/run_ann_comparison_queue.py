@@ -7,17 +7,17 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--root',required=True);p.add_argument('--base',required=True);a=p.parse_args()
     root=Path(a.root);base=Path(a.base);completed=[]
     status=root/'queue_status.json'
-    for method in ('ista_plus','ista_pp','octuf'):
+    for method in ('ista_plus','octuf'):
         job=root/(method+'_seed123')
         if job.exists():raise RuntimeError(f'Refusing duplicate job: {job}')
-        save(status,dict(state='running',current=method,completed=completed,planned=['ista_plus','ista_pp','octuf']))
+        save(status,dict(state='running',current=method,completed=completed,planned=['ista_plus','octuf']))
         cmd=[sys.executable,'-u',str(root/'code/scripts/train_ann_comparators.py'),'--method',method,
              '--source',str(root/'code/baselines'),'--manifest',str(base/'repository_mixed_snn_cycle_20261015/jobs/mixed_snn748894_20261015/split.json'),
              '--sensing-checkpoint',str(base/'repository_sensing_cycle_20261015/jobs/sensing748894_20261015/teacher/best.pt'),
              '--test-root',str(base/'repo/data/test'),'--out',str(job),'--epochs','400','--memory-fraction','.20']
         with (root/(method+'.log')).open('w') as log:
             child=subprocess.Popen(cmd,stdout=log,stderr=subprocess.STDOUT)
-            save(status,dict(state='running',current=method,pid=child.pid,completed=completed,planned=['ista_plus','ista_pp','octuf']))
+            save(status,dict(state='running',current=method,pid=child.pid,completed=completed,planned=['ista_plus','octuf']))
             code=child.wait()
         if code:
             save(status,dict(state='failed',current=method,returncode=code,completed=completed));raise SystemExit(code)

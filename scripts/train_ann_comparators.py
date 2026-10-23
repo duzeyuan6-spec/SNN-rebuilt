@@ -45,10 +45,10 @@ def main():
     optimizer=torch.optim.Adam((p for p in model.parameters() if p.requires_grad),lr=initial_lr)
     scheduler=torch.optim.lr_scheduler.CosineAnnealingLR(optimizer,T_max=a.epochs,eta_min=1e-7)
     protocol=dict(method=a.method+' (official decoder, common sensing protocol)',args={k:v for k,v in vars(a).items() if k!='resume'},
-        upstream={'ista_plus':'https://github.com/jianzhangcs/ISTA-Net-PyTorch','ista_pp':'https://github.com/jianzhangcs/ISTA-Netpp','octuf':'https://github.com/songjiechong/OCTUF'}[a.method],
+        upstream={'ista_plus':'https://github.com/jianzhangcs/ISTA-Net-PyTorch','octuf':'https://github.com/songjiechong/OCTUF'}[a.method],
         decoder_parameters=sum(p.numel() for p in model.parameters() if p.requires_grad),fixed_initializer_coefficients=262144 if a.method=='ista_plus' else 0,sensing_coefficients=phi.numel(),
         capacity_comparison='author decoder widths/depths; NOT parameter matched',
-        adaptations=['frozen shared teacher Phi; OCTUF sensing not jointly trained','ISTA spatial constants 33->32,1089->1024','ISTA+ least-squares initializer fit to training-only full image blocks','ISTA++ single MR training rather than multi-rate'],
+        adaptations=['frozen shared teacher Phi; OCTUF sensing not jointly trained','ISTA spatial constants 33->32,1089->1024','ISTA+ least-squares initializer fit to training-only full image blocks'],
         training=dict(images=360,validation_images=40,epochs=a.epochs,patch=96,repeats=2,effective_batch=4,
                       loss='MSE plus 0.01 sum symmetry losses for ISTA+; MSE otherwise',optimizer=f'Adam {initial_lr} cosine to 1e-7; controlled 400 epoch budget',initialization='random decoder; sensing from common teacher',
                       model_selection='full-image validation SSIM',test_feedback=False),

@@ -111,18 +111,21 @@
   },
   {
     "file": "scripts/run_ann_comparison_queue.py",
-    "sha256": "efb54060a9330e50ca01d1086a90b4971bb75d30ee2a73ba54f9c94dfc30b90b",
-    "source": "frozen local experiment source; copied unchanged"
+    "sha256": "48fc24187ea7316e4d5383bfb29759c2d59be0109490be8af3232859f7c5c8b2",
+    "source": "Current maintained comparator subset; removed unused method routing; retained model implementations unchanged.",
+    "source_sha256_before_scope_update": "efb54060a9330e50ca01d1086a90b4971bb75d30ee2a73ba54f9c94dfc30b90b"
   },
   {
     "file": "scripts/train_ann_comparators.py",
-    "sha256": "4b755db5b5436fcd965f183e42c3c731285a29f0da14b6668d56f0449a520958",
-    "source": "frozen local experiment source; copied unchanged"
+    "sha256": "76c6aa51fbfcc7ddc554696d255b049606801b1e469d237b9622a17f2f5ca97f",
+    "source": "Current maintained comparator subset; removed unused method routing; retained model implementations unchanged.",
+    "source_sha256_before_scope_update": "4b755db5b5436fcd965f183e42c3c731285a29f0da14b6668d56f0449a520958"
   },
   {
     "file": "scripts/train_multirate_octuf.py",
-    "sha256": "9a073f7c0e588b0b84c666c2f7d6ef0381bb4be9d60d31eb38d88ffed9ee9586",
-    "source": "frozen local experiment source; copied unchanged"
+    "sha256": "3dd351bd4523b4b7baf3dfdb8894ddeadab66f460710a1eeba66ca4865b71b7e",
+    "source": "Current maintained comparator subset; removed unused method routing; retained model implementations unchanged.",
+    "source_sha256_before_scope_update": "9a073f7c0e588b0b84c666c2f7d6ef0381bb4be9d60d31eb38d88ffed9ee9586"
   },
   {
     "file": "scripts/train_esdnet_cs.py",
@@ -136,8 +139,9 @@
   },
   {
     "file": "scripts/ann_cs_adapters.py",
-    "sha256": "818016af00832a50c3e7bed1f45e5f34ac8324a3100c3118b5fbadaed7b9979a",
-    "source": "frozen local experiment source; copied unchanged"
+    "sha256": "057134c9aee89ef50b5eaefcde8085eb815f74e055bd92f87bdc27b7770fb9c9",
+    "source": "Current maintained comparator subset; removed unused method routing; retained model implementations unchanged.",
+    "source_sha256_before_scope_update": "818016af00832a50c3e7bed1f45e5f34ac8324a3100c3118b5fbadaed7b9979a"
   },
   {
     "file": "scripts/multirate_octuf_adapter.py",
